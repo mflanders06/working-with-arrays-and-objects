@@ -18,7 +18,8 @@ let product = {
 }
 
 // code here
-
+let productCopy = {...product};
+console.log(productCopy);
 
 
 
