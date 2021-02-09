@@ -191,6 +191,26 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
+//This works perfectly... as does the other one (below).
+//I know what the answer is, I just don't know what the question is.
+function looper(arr){
+  let innerArray = [];
+  for(i = 0; i < arr.length; i++){
+    if (arr[i].length % 2 === 0){
+      innerArray.push('even');
+    }
+    else {
+      innerArray.push('odd');
+    }
+  }
+  return innerArray;
+}
+
+looper(numsArr);
+
+
+/*
+This works perfectly... misunderstood the question.
 function looper(arr){
   //console.log(arr);
   for(i = 0; i < arr.length; i++){
@@ -202,7 +222,7 @@ function looper(arr){
       else {
         arr[i].splice(j, 1, 'odd');
       }
-      console.log(arr);
+      //console.log(arr);
     }
   }
   return arr;
@@ -210,4 +230,5 @@ function looper(arr){
 
 looper(numsArr);
 
-//console.log(numsArr);
+console.log(numsArr);
+*/
