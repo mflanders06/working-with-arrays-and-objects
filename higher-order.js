@@ -144,8 +144,6 @@ function prob5(arr){
   return innerArr
 }
 
-
-
 function myDestMultiply(obj){
   let {price, tax} = obj;
   let innerTotal = price + (price * tax);
@@ -170,7 +168,48 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-let bobsTotal  = prob6(purchases); //Code Here
+
+let bobsTotal  = 0;
+purchases.forEach(element => {
+  //console.log(element['price']);
+  if (element['owner'] === 'Bob'){
+    bobsTotal += element['price'];
+  }
+});
+
+
+
+/*
+Attempt #3 (it works!)
+function prob6(arr){
+  let innerAcc = 0;
+  for (i = 0; i < arr.length; i++){
+    //console.log(innerAcc, arr[i]['price']);
+    if (arr[i]['owner'] === 'Bob'){
+      innerAcc += arr[i]['price'];
+    }  
+  }
+  return innerAcc;
+}
+*/
+
+
+
+
+
+//console.log(purchases[0].price);
+
+/*
+//Attempt #2
+purchases.reduce(function(total, index){
+  console.log(index.price);
+  return total + index['price'];
+});
+*/
+
+/*
+//Attempt #1 (fail)
+prob6(purchases); //Code Here
 
 function prob6(arr){
   let innerArr = [];
@@ -192,3 +231,6 @@ function myDestPrice(obj){
   //console.log(price);
   return price;
 }
+*/
+
+
