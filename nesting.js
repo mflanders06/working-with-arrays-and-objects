@@ -209,8 +209,8 @@ function looper(arr){
 looper(numsArr);
 
 
-/*
-This works perfectly... misunderstood the question.
+
+//This works perfectly... misunderstood the question.
 function looper(arr){
   //console.log(arr);
   for(i = 0; i < arr.length; i++){
@@ -231,4 +231,3 @@ function looper(arr){
 looper(numsArr);
 
 console.log(numsArr);
-*/
