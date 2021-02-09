@@ -201,7 +201,7 @@ function looper(){
       if (numsArr[i][j] % 2 === 0){
         numsArr[i].splice(j, 1, 'even');
       }
-      else {
+      else if (numsArr[i][j] % 2 === 1) {
         numsArr[i].splice(j, 1, 'odd');
       }
       //console.log(numsArr);
