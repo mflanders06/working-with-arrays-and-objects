@@ -98,19 +98,19 @@ function double(obj){
 */
 
 //Code Here
-/*
+
 function secrets(obj){
   let innerSecrets = ''
   for (let key in obj){
-    if (obj[0] === 's')){
-      if (obj[1] === 'h'){
+    if (key[0] === 's'){
+      if (key[1] === 'h'){
         innerSecrets += obj[key];
       }
     }
   }
   return innerSecrets;
 }
-*/
+
 
 /* 
   Sometimes it's needed to delete object properties. 
@@ -142,8 +142,8 @@ function secrets(obj){
 //Code Here
 function removePassword(obj){
   for(let key in obj){
-    //console.log(obj[key], typeof obj[key]);
-    if (obj[key] === 'password'){
+    //console.log(key, typeof key);
+    if (key === 'password'){
       delete obj[key];
     }
   }
@@ -168,7 +168,13 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
-
+for(let key in deleteTheBigNumbers){
+  //console.log(deleteTheBigNumbers[key]);
+  if (deleteTheBigNumbers[key] > 100){
+    delete deleteTheBigNumbers[key];
+  }
+  
+}
 
 
 ////////// PROBLEM 7 //////////
@@ -181,6 +187,17 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
+
+function startsWithK(obj){
+
+  for(let key in obj){
+    //console.log(key);
+    if(key[0] === 'k'){
+      delete obj[key];
+    }
+  }
+  return obj;
+}
 
 
 
