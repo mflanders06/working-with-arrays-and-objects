@@ -191,8 +191,31 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
+
+
+function looper(){
+  //console.log(arr);
+  for(let i = 0; i < numsArr.length; i++){
+    for(let j = 0; j < numsArr[i].length; j++){
+      //console.log(numsArr[i][j]);
+      if (numsArr[i][j] % 2 === 0){
+        numsArr[i].splice(j, 1, 'even');
+      }
+      else {
+        numsArr[i].splice(j, 1, 'odd');
+      }
+      //console.log(numsArr);
+    }
+  }
+  return numsArr;
+}
+
+looper();
+console.log(numsArr);
+
 //This works perfectly... as does the other one (below).
 //I know what the answer is, I just don't know what the question is.
+/*
 function looper(arr){
   let innerArray = [];
   for(i = 0; i < arr.length; i++){
@@ -207,11 +230,11 @@ function looper(arr){
 }
 
 looper(numsArr);
-
+*/
 
 
 //This works perfectly... misunderstood the question.
-function looper(arr){
+/*function looper(arr){
   //console.log(arr);
   for(i = 0; i < arr.length; i++){
     for(j = 0; j < arr[i].length; j++){
@@ -231,3 +254,4 @@ function looper(arr){
 looper(numsArr);
 
 console.log(numsArr);
+*/
